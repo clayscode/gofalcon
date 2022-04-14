@@ -92,13 +92,13 @@ type RTRGetExtractedFileContentsOK struct {
 	 */
 	XRateLimitRemaining int64
 
-	Payload []int64
+	Payload []byte
 }
 
 func (o *RTRGetExtractedFileContentsOK) Error() string {
 	return fmt.Sprintf("[GET /real-time-response/entities/extracted-file-contents/v1][%d] rTRGetExtractedFileContentsOK  %+v", 200, o.Payload)
 }
-func (o *RTRGetExtractedFileContentsOK) GetPayload() []int64 {
+func (o *RTRGetExtractedFileContentsOK) GetPayload() []byte {
 	return o.Payload
 }
 
